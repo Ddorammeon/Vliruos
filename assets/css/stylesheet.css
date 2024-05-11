@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-BlackItalic.eot');
+    src: url('../font/SFProDisplay-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-BlackItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-BlackItalic.woff') format('woff'),
+        url('../font/SFProDisplay-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-HeavyItalic.eot');
+    src: url('../font/SFProDisplay-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-HeavyItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-HeavyItalic.woff') format('woff'),
+        url('../font/SFProDisplay-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-Bold.eot');
+    src: url('../font/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-Bold.woff2') format('woff2'),
+        url('../font/SFProDisplay-Bold.woff') format('woff'),
+        url('../font/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-LightItalic.eot');
+    src: url('../font/SFProDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-LightItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-LightItalic.woff') format('woff'),
+        url('../font/SFProDisplay-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-Medium.eot');
+    src: url('../font/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../font/SFProDisplay-Medium.woff') format('woff'),
+        url('../font/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-UltralightItalic.eot');
+    src: url('../font/SFProDisplay-UltralightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-UltralightItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-UltralightItalic.woff') format('woff'),
+        url('../font/SFProDisplay-UltralightItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-Regular.eot');
+    src: url('../font/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../font/SFProDisplay-Regular.woff') format('woff'),
+        url('../font/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-ThinItalic.eot');
+    src: url('../font/SFProDisplay-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-ThinItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-ThinItalic.woff') format('woff'),
+        url('../font/SFProDisplay-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../font/SFProDisplay-SemiboldItalic.eot');
+    src: url('../font/SFProDisplay-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/SFProDisplay-SemiboldItalic.woff2') format('woff2'),
+        url('../font/SFProDisplay-SemiboldItalic.woff') format('woff'),
+        url('../font/SFProDisplay-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}

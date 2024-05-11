@@ -313,9 +313,6 @@ a {
 
 .goal--item {
     flex: 1;
-    border-top: 1px solid #fff;
-    border-width: 100%;
-    padding-top: 32px;
 }
 
 .goal--item__desc {
@@ -328,6 +325,9 @@ a {
     letter-spacing: -0.017em;
     text-align: left;
     color: #fff;
+    border-top: 1px solid #fff;
+    border-width: 100%;
+    padding-top: 32px;
 }
 
 .goal--item__desc span {
@@ -421,6 +421,14 @@ a {
     background: linear-gradient(83.61deg, #16403C 0%, #39643D 46%, #507C3D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.system--btn__icon {
+    width: 24px;
+    height: 24px;
+    padding: 6.75px 5.75px;
+    border-radius: 50%;
+    background: linear-gradient(83.61deg, #16403C 0%, #39643D 46%, #507C3D 100%);
 }
 
 /*================= Committees =================*/

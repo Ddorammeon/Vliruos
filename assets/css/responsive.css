@@ -127,6 +127,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 16px;
+        border-top: 1px solid #fff;
+        border-width: 100%;
+        padding-top: 32px;
     }
 
     .goal--item:nth-child(1) {
@@ -137,6 +140,7 @@
     .goal--item__desc {
         margin-top: 0;
         width: 66.8%;
+        border: none;
     }
 
 

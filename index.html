@@ -1,3 +1,48 @@
+<!-- <?php
+
+  require './PHPMailer-master/src/Exception.php';
+	require './PHPMailer-master/src/PHPMailer.php';
+	require './PHPMailer-master/src/SMTP.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+if ($_POST) {
+	try {
+  $name = $_POST["name"];
+	$email = $_POST["email"];
+	$message = $_POST["message"];
+
+	$mail = new PHPMailer(true);
+
+	$mail ->SMTPDebug = 2;
+	$mail ->isSMTP();
+	$mail ->SMTPAuth = "true";
+  
+
+	$mail ->Host = "smtp.gmail.com";
+	$mail ->SMTPSecure = 'ssl';
+	$mail ->Port = 465;
+
+	$mail ->Username = "Vlirous";
+	$mail ->Password = "cflc cybj ibkv oyyr";
+
+	$mail ->setFrom("dmon70998@gmail.com", "VN-JP Landing Pages");
+	$mail ->addAddress("quanttqx121@gmail.com", "CIE-PTIT");
+
+	$mail ->isHTML(true);
+	$content = "Name: $name\nPhone: $phone";
+	$subject = "New Submission";
+  $mail ->Body = $content;
+  $mail ->Subject = $subject;
+
+	$mail ->send();
+  }
+  catch (Exception $e) {
+  }
+}
+
+?>  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -86,6 +131,9 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
 
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
     <!-- Styles CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
@@ -93,7 +141,10 @@
     <link rel="stylesheet" href="./assets/css/responsive.css" />
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -105,13 +156,6 @@
         </div>
 
         <div class="header--content">
-          <div class="media--block hide-on-mobile">
-            <img src="./assets/img/email.svg" alt="" />
-            <img src="./assets/img/facebook.svg" alt="" />
-            <img src="./assets/img/youtube.svg" alt="" />
-            <img src="./assets/img/instagram.svg" alt="" />
-          </div>
-
           <div class="language--block">
             <img src="./assets/img/flag.png" alt="" class="language__flag" />
             <p class="language hide-on-mobile">Tiếng Việt</p>
@@ -139,18 +183,40 @@
           <button class="hero--btn btn">
             <p>Bắt đầu khoá học</p>
 
-            <img
+            <svg
               class="hero--btn__img"
-              src="./assets/img/arrow-right.svg"
-              alt=""
-            />
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.0306 8.53074L9.53063 13.0307C9.38973 13.1716 9.19863 13.2508 8.99938 13.2508C8.80012 13.2508 8.60902 13.1716 8.46813 13.0307C8.32723 12.8898 8.24807 12.6987 8.24807 12.4995C8.24807 12.3002 8.32723 12.1091 8.46813 11.9682L11.6875 8.75011H2.5C2.30109 8.75011 2.11032 8.67109 1.96967 8.53044C1.82902 8.38979 1.75 8.19902 1.75 8.00011C1.75 7.8012 1.82902 7.61043 1.96967 7.46978C2.11032 7.32913 2.30109 7.25011 2.5 7.25011H11.6875L8.46937 4.03011C8.32848 3.88921 8.24932 3.69812 8.24932 3.49886C8.24932 3.2996 8.32848 3.10851 8.46937 2.96761C8.61027 2.82671 8.80137 2.74756 9.00062 2.74756C9.19988 2.74756 9.39098 2.82671 9.53187 2.96761L14.0319 7.46761C14.1018 7.53738 14.1573 7.62028 14.1951 7.71155C14.2329 7.80281 14.2523 7.90065 14.2522 7.99943C14.252 8.09822 14.2324 8.19601 14.1944 8.28718C14.1564 8.37836 14.1007 8.46113 14.0306 8.53074Z"
+                fill="url(#paint0_linear_62_874)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_62_874"
+                  x1="1.75"
+                  y1="13.2508"
+                  x2="15.4099"
+                  y2="11.4291"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#16403C" />
+                  <stop offset="0.46" stop-color="#39643D" />
+                  <stop offset="1" stop-color="#507C3D" />
+                </linearGradient>
+              </defs>
+            </svg>
           </button>
         </div>
       </section>
 
       <!-- Nav -->
       <section class="nav">
-        <div class="nav--item">
+        <div class="nav--item" href="#goal">
           <a href="#goal">
             <p class="nav--content">Mục tiêu của dự án</p>
             <img src="./assets/img/arr-right.svg" alt="" />
@@ -453,6 +519,7 @@
                 </svg>
 
                 <svg
+                  class="item__icon"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -511,6 +578,7 @@
                 </svg>
 
                 <svg
+                  class="item__icon"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -565,6 +633,7 @@
                 </svg>
 
                 <svg
+                  class="item__icon"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -619,6 +688,7 @@
                 </svg>
 
                 <svg
+                  class="item__icon"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -662,6 +732,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="members__btn"
+                id="prev"
               >
                 <path
                   d="M24.0003 10.0001C24.0003 10.2653 23.8949 10.5196 23.7074 10.7072C23.5199 10.8947 23.2655 11.0001 23.0003 11.0001H3.41405L10.7078 18.2926C10.8007 18.3855 10.8744 18.4958 10.9247 18.6172C10.975 18.7386 11.0009 18.8687 11.0009 19.0001C11.0009 19.1315 10.975 19.2616 10.9247 19.383C10.8744 19.5044 10.8007 19.6147 10.7078 19.7076C10.6149 19.8005 10.5046 19.8742 10.3832 19.9245C10.2618 19.9747 10.1317 20.0006 10.0003 20.0006C9.8689 20.0006 9.7388 19.9747 9.6174 19.9245C9.49601 19.8742 9.38571 19.8005 9.2928 19.7076L0.292798 10.7076C0.199822 10.6147 0.126063 10.5044 0.0757387 10.383C0.0254144 10.2616 -0.000488281 10.1315 -0.000488281 10.0001C-0.000488281 9.86865 0.0254144 9.73853 0.0757387 9.61713C0.126063 9.49573 0.199822 9.38544 0.292798 9.29257L9.2928 0.292568C9.48044 0.104927 9.73493 -0.000488283 10.0003 -0.000488281C10.2657 -0.000488279 10.5202 0.104927 10.7078 0.292568C10.8954 0.480208 11.0009 0.734704 11.0009 1.00007C11.0009 1.26543 10.8954 1.51993 10.7078 1.70757L3.41405 9.00007H23.0003C23.2655 9.00007 23.5199 9.10542 23.7074 9.29296C23.8949 9.4805 24.0003 9.73485 24.0003 10.0001Z"
@@ -676,6 +747,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="members__btn"
+                id="next"
               >
                 <path
                   d="M23.707 10.7076L14.707 19.7076C14.5194 19.8952 14.2649 20.0006 13.9995 20.0006C13.7341 20.0006 13.4797 19.8952 13.292 19.7076C13.1044 19.5199 12.999 19.2654 12.999 19.0001C12.999 18.7347 13.1044 18.4802 13.292 18.2926L20.5858 11.0001H0.999512C0.734295 11.0001 0.479941 10.8947 0.292405 10.7072C0.104869 10.5196 -0.000488281 10.2653 -0.000488281 10.0001C-0.000488281 9.73485 0.104869 9.4805 0.292405 9.29296C0.479941 9.10542 0.734295 9.00007 0.999512 9.00007H20.5858L13.292 1.70757C13.1044 1.51993 12.999 1.26543 12.999 1.00007C12.999 0.734704 13.1044 0.480208 13.292 0.292568C13.4797 0.104927 13.7341 -0.000488281 13.9995 -0.000488281C14.2649 -0.000488281 14.5194 0.104927 14.707 0.292568L23.707 9.29257C23.8 9.38544 23.8737 9.49573 23.9241 9.61713C23.9744 9.73853 24.0003 9.86865 24.0003 10.0001C24.0003 10.1315 23.9744 10.2616 23.9241 10.383C23.8737 10.5044 23.8 10.6147 23.707 10.7076Z"
@@ -685,15 +757,13 @@
             </div>
           </div>
 
-          <div class="members--list">
+          <div class="members--list owl-carousel">
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar1.png" alt="" class="item__ava" />
-                <img
-                  src="./assets/img/Ghent-Uni.svg"
-                  alt=""
-                  class="item__univ"
-                />
+                <div class="item__univ">
+                  <img src="./assets/img/Ghent-Uni.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -757,11 +827,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar2.png" alt="" class="item__ava" />
-                <img
-                  src="./assets/img/Ghent-Uni.svg"
-                  alt=""
-                  class="item__univ"
-                />
+                <div class="item__univ">
+                  <img src="./assets/img/Ghent-Uni.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -824,7 +892,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar4.png" alt="" class="item__ava" />
-                <img src="./assets/img/logo.svg" alt="" class="item__univ" />
+                <div class="item__univ">
+                  <img src="./assets/img/logo.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -888,7 +958,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar5.png" alt="" class="item__ava" />
-                <img src="./assets/img/logo.svg" alt="" class="item__univ" />
+                <div class="item__univ">
+                  <img src="./assets/img/logo.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -951,7 +1023,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar6.jpg" alt="" class="item__ava" />
-                <img src="./assets/img/logo.svg" alt="" class="item__univ" />
+                <div class="item__univ">
+                  <img src="./assets/img/logo.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -1013,7 +1087,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar7.jpg" alt="" class="item__ava" />
-                <img src="./assets/img/logo.svg" alt="" class="item__univ" />
+                <div class="item__univ">
+                  <img src="./assets/img/logo.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -1075,7 +1151,9 @@
             <div class="members--item">
               <div class="comm__img--block">
                 <img src="./assets/img/avatar8.jpg" alt="" class="item__ava" />
-                <img src="./assets/img/logo.svg" alt="" class="item__univ" />
+                <div class="item__univ">
+                  <img src="./assets/img/logo.svg" alt="" />
+                </div>
               </div>
 
               <div class="item__content">
@@ -1143,9 +1221,10 @@
           <h2 class="activity__heading heading1">Hoạt động của dự án</h2>
           <div class="activity--content">
             <div class="activity--list__left">
-              <div class="activity--list__main">
+              <div class="activity--list__main active">
                 <h3 class="activity--list__heading">
-                  Lĩnh vực: Chương trình và phương pháp giáo dục
+                  Lĩnh vực: Chương trình và phương <br class="show-on-mobile" />
+                  pháp giáo dục
                 </h3>
                 <img src="assets/img/arr-down.svg" />
               </div>
@@ -1245,7 +1324,8 @@
               <div>
                 <div class="activity--list__main">
                   <h3 class="activity--list__heading">
-                    Lĩnh vực: Tiếp cận và hỗ trợ chính sách​
+                    Lĩnh vực: Tiếp cận và hỗ trợ <br class="show-on-mobile" />
+                    chính sách​
                   </h3>
                   <img src="assets/img/arr-down.svg" />
                 </div>
@@ -1277,20 +1357,7 @@
             </div>
           </div>
 
-          <div class="activity--media">
-            <div class="activity__btn--block hide-on-mobile">
-              <img
-                src="./assets/img/act-left.svg"
-                alt=""
-                class="activity__btn"
-              />
-              <img
-                src="./assets/img/act-right.svg"
-                alt=""
-                class="activity__btn"
-              />
-            </div>
-
+          <div class="activity--media owl-carousel">
             <img
               src="./assets/img/act__img1.jpg"
               alt=""
@@ -1329,11 +1396,7 @@
           <div class="main-content">
             <h2 class="form__heading heading1">Liên lạc với chúng tôi</h2>
             <div class="form__action">
-              <form
-                action="https://formsubmit.co/nloc24.8.00@gmail.com"
-                method="POST"
-                class="form__js"
-              >
+              <form action="/" method="POST" class="form__js">
                 <div class="form__info">
                   <div class="form__name">
                     <label for="name">Họ và tên</label><br />
@@ -1349,16 +1412,61 @@
                   <label for="message">Nội dung</label><br />
                   <textarea name="message" id="message"></textarea>
                 </div>
-                <div class="form__submit">
+                <div class="form__submit show-modal">
                   <button type="submit" class="form--btn btn">
                     <p>Gửi ngay</p>
                     <div class="form--btn__img">
-                      <img src="./assets/img/arrow-right.svg" alt="" />
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.0306 8.53074L9.53063 13.0307C9.38973 13.1716 9.19863 13.2508 8.99938 13.2508C8.80012 13.2508 8.60902 13.1716 8.46813 13.0307C8.32723 12.8898 8.24807 12.6987 8.24807 12.4995C8.24807 12.3002 8.32723 12.1091 8.46813 11.9682L11.6875 8.75011H2.5C2.30109 8.75011 2.11032 8.67109 1.96967 8.53044C1.82902 8.38979 1.75 8.19902 1.75 8.00011C1.75 7.8012 1.82902 7.61043 1.96967 7.46978C2.11032 7.32913 2.30109 7.25011 2.5 7.25011H11.6875L8.46937 4.03011C8.32848 3.88921 8.24932 3.69812 8.24932 3.49886C8.24932 3.2996 8.32848 3.10851 8.46937 2.96761C8.61027 2.82671 8.80137 2.74756 9.00062 2.74756C9.19988 2.74756 9.39098 2.82671 9.53187 2.96761L14.0319 7.46761C14.1018 7.53738 14.1573 7.62028 14.1951 7.71155C14.2329 7.80281 14.2523 7.90065 14.2522 7.99943C14.252 8.09822 14.2324 8.19601 14.1944 8.28718C14.1564 8.37836 14.1007 8.46113 14.0306 8.53074Z"
+                          fill="url(#paint0_linear_62_874)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_62_874"
+                            x1="1.75"
+                            y1="13.2508"
+                            x2="15.4099"
+                            y2="11.4291"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#16403C" />
+                            <stop offset="0.46" stop-color="#39643D" />
+                            <stop offset="1" stop-color="#507C3D" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
                   </button>
                 </div>
               </form>
             </div>
+          </div>
+        </section>
+
+        <section class="form--popup">
+          <span class="overlay"></span>
+          <div id="popupbox">
+            <img
+              src="./assets/img/fill-checked.svg"
+              alt=""
+              class="popup__img"
+            />
+            <h2 class="popup__heading">Đăng ký nhận tư vấn thành công</h2>
+            <p class="popup__desc">
+              Vui lòng để ý điện thoại. Trung tâm Đào tạo Quốc tế sẽ sớm liên hệ
+              lại qua số điện thoại bạn cung cấp để tư vấn kĩ hơn về chương
+              trình. Nếu bạn có câu hỏi gì có thể liên hệ với chúng tôi qua:
+              <br />Email: <span>cie@ptit.edu.vn</span> <br />Hotline:
+              <span>088 616 0606</span>
+            </p>
+            <button class="popup__btn close-btn">Đã hiểu</button>
           </div>
         </section>
       </section>
@@ -1432,5 +1540,85 @@
         </div>
       </footer>
     </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--  -->
+    <script src="./assets/owl.carousel.js"></script>
+    <script src="./assets/owl.carousel.min.js"></script>
+    <script>
+      const prevIcon = '<img src="./assets/img/act-left.svg" alt:"left">';
+      const nextIcon = '<img src="./assets/img/act-right.svg" alt:"right">';
+
+      $(".owl-carousel").owlCarousel({
+        nav: false,
+        loop: true,
+        margin: 15,
+        navText: [prevIcon, nextIcon],
+        autoplay: true,
+        lazyload: true,
+        autoplaySpeed: 2000,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          600: {
+            items: 2,
+            nav: false,
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            loop: true,
+          },
+        },
+      });
+    </script>
+
+    <!-- accordion ()-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionHeaders = document.querySelectorAll(
+          ".activity--list__main"
+        );
+
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            const content = this.nextElementSibling;
+
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- member slider -->
+
+    <!-- popup -->
+    <script>
+      const section = document.querySelector(".form--popup"),
+        overlay = document.querySelector(".overlay"),
+        showBtn = document.querySelector(".show-modal"),
+        closeBtn = document.querySelector(".close-btn");
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+      overlay.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+      closeBtn.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+    </script>
   </body>
 </html>

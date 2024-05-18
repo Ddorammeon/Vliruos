@@ -25,7 +25,7 @@
     }
 
     .desc1 {
-        font-size: 1.86rem;
+        font-size: 1.6rem;
         font-weight: 274;
         line-height: 2.24rem;
         letter-spacing: -0.017em;
@@ -73,7 +73,6 @@
 
     .nav--item {
         width: 100%;
-        padding: 16px;
     }
 
     .nav--content {
@@ -89,6 +88,10 @@
         flex-direction: column;
         gap: 18px;
         margin-bottom: 40px;
+    }
+
+    .desc__desc--block {
+        margin-left: 0;
     }
 
     .desc__desc {
@@ -175,6 +178,10 @@
         line-height: 1.82rem;
     }
 
+    .system--btn {
+        font-size: 1.6rem;
+    }
+
     .comm {
         padding: 60px 0;
     }
@@ -232,10 +239,6 @@
 
     .activity--content {
         flex-direction: column;
-    }
-
-    .activity--item p {
-        font-size: 1.9rem;
     }
 
     .activity--media {

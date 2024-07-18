@@ -1,48 +1,3 @@
-<!-- <?php
-
-  require './PHPMailer-master/src/Exception.php';
-	require './PHPMailer-master/src/PHPMailer.php';
-	require './PHPMailer-master/src/SMTP.php';
-  use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-
-if ($_POST) {
-	try {
-  $name = $_POST["name"];
-	$email = $_POST["email"];
-	$message = $_POST["message"];
-
-	$mail = new PHPMailer(true);
-
-	$mail ->SMTPDebug = 2;
-	$mail ->isSMTP();
-	$mail ->SMTPAuth = "true";
-  
-
-	$mail ->Host = "smtp.gmail.com";
-	$mail ->SMTPSecure = 'ssl';
-	$mail ->Port = 465;
-
-	$mail ->Username = "Vlirous";
-	$mail ->Password = "cflc cybj ibkv oyyr";
-
-	$mail ->setFrom("dmon70998@gmail.com", "VN-JP Landing Pages");
-	$mail ->addAddress("quanttqx121@gmail.com", "CIE-PTIT");
-
-	$mail ->isHTML(true);
-	$content = "Name: $name\nPhone: $phone";
-	$subject = "New Submission";
-  $mail ->Body = $content;
-  $mail ->Subject = $subject;
-
-	$mail ->send();
-  }
-  catch (Exception $e) {
-  }
-}
-
-?>  -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1396,7 +1351,7 @@ if ($_POST) {
           <div class="main-content">
             <h2 class="form__heading heading1">Liên lạc với chúng tôi</h2>
             <div class="form__action">
-              <form action="/" method="POST" class="form__js">
+              <form id="infoForm" class="form__js">
                 <div class="form__info">
                   <div class="form__name">
                     <label for="name">Họ và tên</label><br />
@@ -1413,7 +1368,13 @@ if ($_POST) {
                   <textarea name="message" id="message"></textarea>
                 </div>
                 <div class="form__submit show-modal">
-                  <button type="submit" class="form--btn btn">
+                  <button
+                    type="submit"
+                    name="action"
+                    id="submitBtn"
+                    value="Submit Info"
+                    class="form--btn btn"
+                  >
                     <p>Gửi ngay</p>
                     <div class="form--btn__img">
                       <svg
@@ -1608,17 +1569,40 @@ if ($_POST) {
 
     <!-- popup -->
     <script>
-      const section = document.querySelector(".form--popup"),
-        overlay = document.querySelector(".overlay"),
-        showBtn = document.querySelector(".show-modal"),
-        closeBtn = document.querySelector(".close-btn");
-      showBtn.addEventListener("click", () => section.classList.add("active"));
-      overlay.addEventListener("click", () =>
-        section.classList.remove("active")
-      );
-      closeBtn.addEventListener("click", () =>
-        section.classList.remove("active")
-      );
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const section = document.querySelector(".form--popup"),
+          overlay = document.querySelector(".overlay"),
+          showBtn = document.querySelector(".show-modal"),
+          closeBtn = document.querySelector(".close-btn");
+        showBtn.addEventListener("click", () =>
+          section.classList.add("active")
+        );
+        overlay.addEventListener("click", () =>
+          section.classList.remove("active")
+        );
+        closeBtn.addEventListener("click", () =>
+          section.classList.remove("active")
+        );
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Handle submit for info form
+        $("#infoForm").submit(function (event) {
+          event.preventDefault(); // Prevent default form submission
+          $.ajax({
+            url: "vn-vlirous.php",
+            type: "POST",
+            data: $(this).serialize() + "&action=Submit Info",
+            success: function (response) {
+              console.log("Infor form submitted successfully.");
+              // alert(response);
+              $("#popupbox").modal("show");
+            },
+          });
+        });
+      });
     </script>
   </body>
 </html>

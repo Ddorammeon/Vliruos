@@ -152,6 +152,13 @@ a {
     margin-bottom: 32px;
 }
 
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 .hero--btn {
     color: #fff;
     background: linear-gradient(83.61deg, #16403C 0%, #39643D 46%, #507C3D 100%);
@@ -186,7 +193,6 @@ a {
     border-radius: 50%;
     background: #fff;
 }
-
 
 
 /*================= Navigation =================*/
